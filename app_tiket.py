@@ -506,7 +506,7 @@ def recommend(title: str, desc: str, top_k:int=TOP_K) -> pd.DataFrame:
 
 # from rapidfuzz import fuzz, process
 
-from fuzzywuzzy import fuzz
+# from fuzzywuzzy import fuzz
 
 def recommend_with_register_and_fuzzy(title: str, desc: str, top_k:int=TOP_K, hist_k:int=5):
     layer1 = recommend(title, desc, top_k)
