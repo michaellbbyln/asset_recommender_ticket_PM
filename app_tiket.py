@@ -12,7 +12,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 import streamlit as st
 
 # ==== SharePoint Import ====
-import gspread
+
 from google.oauth2.service_account import Credentials
 from datetime import datetime
 from io import BytesIO
@@ -596,4 +596,5 @@ st.info(
     "- 🖥️ [Form Request Aset **Aplikasi**](https://forms.office.com/r/M5Z5dCV5VN)\n"
     "- 🔗 [Form Request Aset **API**](https://forms.office.com/r/MKfNVLXPBn)"
 )
+
 
