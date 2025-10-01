@@ -562,15 +562,18 @@ if st.button("Cari Rekomendasi"):
         out = recommend_with_register_and_fuzzy(title, desc, top_k, hist_k=5)
 
         st.write("### 🔮 Layer 1: Rekomendasi Aset")
-        st.dataframe(out["layer1"])
+        # st.dataframe(out["layer1"])
+        st.dataframe(out["layer1"][["ASSET_SUGGEST"]])  # tampilkan hanya nama aset
 
         st.write("### 📜 Layer 2: Historis Tiap Aset")
         for aset, hist in out["layer2"].items():
             with st.expander(f"Detail historis untuk aset: {aset}"):
                 st.write("**Historis Relevan (Fuzzy Match):**")
-                st.dataframe(hist["fuzzy"])
+                # st.dataframe(hist["fuzzy"])
+                st.dataframe(hist["fuzzy"][["TICKET_TITLE","TICKET_DESCRIPTION","ASSET_NAME","RESULT"]])
                 st.write("**Historis Lain Aset Ini:**")
-                st.dataframe(hist["all"])
+                # st.dataframe(hist["all"])
+                st.dataframe(hist["all"][["TICKET_TITLE","TICKET_DESCRIPTION","ASSET_NAME","RESULT"]])
 
 import qrcode
 from io import BytesIO
@@ -596,5 +599,6 @@ st.info(
     "- 🖥️ [Form Request Aset **Aplikasi**](https://forms.office.com/r/M5Z5dCV5VN)\n"
     "- 🔗 [Form Request Aset **API**](https://forms.office.com/r/MKfNVLXPBn)"
 )
+
 
 
