@@ -5,5 +5,4 @@ scikit-learn
 joblib
 openpyxl
 ipython
-google-auth
 qrcode
