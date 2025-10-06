@@ -13,7 +13,6 @@ import streamlit as st
 
 # ==== SharePoint Import ====
 
-from google.oauth2.service_account import Credentials
 from datetime import datetime
 from io import BytesIO
 from datetime import datetime
@@ -580,6 +579,7 @@ st.info(
     "- 🖥️ [Form Request Aset **Aplikasi**](https://forms.office.com/r/M5Z5dCV5VN)\n"
     "- 🔗 [Form Request Aset **API**](https://forms.office.com/r/MKfNVLXPBn)"
 )
+
 
 
 
