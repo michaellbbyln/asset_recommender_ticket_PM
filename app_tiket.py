@@ -26,25 +26,6 @@ TRAIN_YEARS = {2016,2017,2018,2019,2020,2021,2022,2023,2024,2025}
 # TRAIN_YEARS = {2023,2024}
 TOP_K       = 5
 
-# Google Sheets config
-# scope = ["https://www.googleapis.com/auth/spreadsheets",
-        #  "https://www.googleapis.com/auth/drive"]
-
-# kalau lokal pakai file JSON
-# credentials = Credentials.from_service_account_file("gcp_cred.json", scopes=scope)
-# import json
-# service_account_info = st.secrets["gcp_service_account"]
-# credentials = Credentials.from_service_account_info(service_account_info, scopes=scope)
-
-# client = gspread.authorize(credentials)
-
-# SHEET_ID = "18CLcKKsWGMi87rG0sKEVmdOuuzxWmNZVrOtoZpEr1gU"
-# sheet = client.open_by_key(SHEET_ID).sheet1  # tab pertama
-
-# def append_request(title, desc, asset_name, notes=""):
-#     row = [str(datetime.now()), title, desc, asset_name, notes]
-#     sheet.append_row(row, value_input_option="USER_ENTERED")
-
 # Bobot skor gabungan (rekomendasi)
 W_ALIAS     = 1.00   # alias / canonical substring (kuat)
 W_TOKEN_JAC = 0.50   # token Jaccard (overlap per kata bermakna)
@@ -599,6 +580,7 @@ st.info(
     "- 🖥️ [Form Request Aset **Aplikasi**](https://forms.office.com/r/M5Z5dCV5VN)\n"
     "- 🔗 [Form Request Aset **API**](https://forms.office.com/r/MKfNVLXPBn)"
 )
+
 
 
 
